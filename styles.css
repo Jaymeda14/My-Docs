@@ -30,3 +30,10 @@ section{
     display: flex;
     flex-direction: column;
 }
+input{
+    margin: 3px;
+}
+select{
+    width: 100px;
+    margin-left: 3px;
+}
