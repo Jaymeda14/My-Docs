@@ -7,10 +7,12 @@ body {
 
 .container {
     max-width: 400px;
-    margin: 20px auto;
+    min-width: 300px;
+    margin: 20px;
     background-color: #fff;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
 }
 
 form {
@@ -32,8 +34,22 @@ section{
 }
 input{
     margin: 3px;
+    height: 20px;
 }
 select{
     width: 100px;
     margin-left: 3px;
+    height: 20px;
+}
+main{
+    display: flex;
+    align-content: flex-start;
+}
+#docPronto{
+    margin: 20px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 760px;
+    height: 1110px;
 }

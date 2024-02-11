@@ -1,9 +1,11 @@
+
 function gerarRecibo() {
     // Obtenha os dados do vendedor
     var nomeVendedor = document.getElementById('nomeVendedor').value;
     var cpfVendedor = document.getElementById('cpfVendedor').value;
     var rgVendedor = document.getElementById('rgVendedor').value;
     var endereçoVendedor = document.getElementById('endereçoVendedor').value;
+    
 
     // Obtenha os dados do comprador
     var nomeComprador = document.getElementById('nomeComprador').value;
@@ -61,8 +63,44 @@ function gerarRecibo() {
 
         
         <!-- Adicione outras informações do currículo -->
-    `;
+    `
+    
+
+    ;
 
     // Atualize a seção do currículo gerado na página
     document.getElementById('reciboGerado').innerHTML = recibo;
+}
+function teste (){
+    //Dados vendedor
+    let nomeVendedor = document.getElementById('nomeVendedor').value;
+    var cpfVendedor = document.getElementById('cpfVendedor').value;
+    var rgVendedor = document.getElementById('rgVendedor').value;
+    var endereçoVendedor = document.getElementById('endereçoVendedor').value;
+
+    //dados Comprador
+    var nomeComprador = document.getElementById('nomeComprador').value;
+    var cpfComprador = document.getElementById('cpfComprador').value;
+    var rgComprador = document.getElementById('rgComprador').value;
+    var endereçoComprador = document.getElementById('endereçoComprador').value;
+
+    //Dados Objeto do contrato
+    var terrenoOuImovel = document.getElementById('terrenoOuImovel').value;
+    var endObjeto = document.getElementById('endObjeto').value;
+    var mFrente = document.getElementById('mFrente').value;
+    var mDireita = document.getElementById('mDireita').value;
+    var mEsquerda = document.getElementById('mEsquerda').value;
+    var mFundos = document.getElementById('mFundos').value;
+    
+    // Usando dados do Vendedor
+    document.getElementById('nameV').innerText = nomeVendedor;
+    document.getElementById('nameVa').innerText = nomeVendedor;
+
+
+    // Usando dados do Comprador
+
+
+
+    // Usando dados do Objeto
+    document.getElementById('terOuIm').innerText = terrenoOuImovel
 }
