@@ -16,115 +16,133 @@
                         <!-- Campos do formulário Vendedor -->
                 <fieldset>
                 <legend>Dados do Vendedor</legend>
-                    Masculino<input type="radio" name="genVend" id="" checked>
-                    Feminino<input type="radio" name="genVend" id=""><br><br>
+                    <input type="radio" name="genVend" id="genVendM" checked>
+                    <label for="genVendM" class="radio">Masculino</label>
+                    <input type="radio" name="genVend" id="genVendF">
+                    <label for="genVendF" class="radio">Feminino</label>
                     <div>
-                        <label for="nomeVendedor">Nome:</label>
-                        <input type="text" id="nomeVendedor" required>
+                        <label for="nomeVendedor" class="partes">Nome:</label>
+                        <input type="text" id="nomeVendedor" required class="partes1">
                     </div>
                     <div>
-                        <label for="nacVendedor">Nacionalidade:</label>
-                        <input type="text" id="nacVendedor" required>
+                        <label for="nacVendedor" class="partes">Nacionalidade:</label>
+                        <input type="text" id="nacVendedor" required class="partes1">
                     </div>
                     <div>
-                        <label for="cpfVendedor">CPF:</label>
-                        <input type="text" id="cpfVendedor" required>
+                        <label for="cpfVendedor" class="partes">CPF:</label>
+                        <input type="text" id="cpfVendedor" required class="partes1">
                     </div>
                     <div>
-                        <label for="rgVendedor">RG:</label>
-                        <input type="numer" name="RG" id="rgVendedor" required>
+                        <label for="rgVendedor" class="partes">RG:</label>
+                        <input type="numer" name="RG" id="rgVendedor" required class="partes1">
                     </div>
                     <div>
-                        <label for="endVendedor">Endereço:</label>
-                        <input type="text" name="" id="endVendedor" required>
+                        <label for="endVendedor" class="partes">Endereço:</label>
+                        <input type="text" name="" id="endVendedor" required class="partes1">
                     </div>
-                    <button type="button" id="cadVendedor" onclick="cadVendedor()">Cadastrar</button>
+                    <p><button type="button" id="cadVendedor" onclick="cadVendedor()" class="botao">Cadastrar Vendedor</button></p>
                 </fieldset>
             </section>
             <section>
                         <!-- Campos do formulário Comprador -->
             <fieldset>
             <legend>Dados Comprador</legend>
-                            Masculino<input type="radio" name="genComp" id="" checked>
-                            Feminino<input type="radio" name="genComp" id=""><br><br>
+                            <input type="radio" name="genComp" id="genCompM">
+                            <label for="genCompM" class="radio">Masculino</label>
+                            <input type="radio" name="genComp" id="genCompF" >
+                            <label for="genCompF" class="radio">Feminino</label>
+                            <br><br>
                             <div>
-                                <label for="nomeComprador">Nome:</label>
-                                <input type="text" id="nomeComprador" required>
+                                <label for="nomeComprador" class="partes">Nome:</label>
+                                <input type="text" id="nomeComprador" required class="partes1">
                             </div>
                             <div>
-                                <label for="nacComprador">Nacionalidade:</label>
-                                <input type="text" id="nacComprador" required>
+                                <label for="nacComprador" class="partes">Nacionalidade:</label>
+                                <input type="text" id="nacComprador" required class="partes1">
                             </div>
                             <div>
-                                <label for="cpfComprador">CPF:</label>
-                                <input type="text" id="cpfComprador" required>
+                                <label for="cpfComprador" class="partes">CPF:</label>
+                                <input type="text" id="cpfComprador" required class="partes1">
                             </div>
                             <div>
-                                <label for="rgComprador">RG:</label>
-                                <input type="numer" name="RG" id="rgComprador" required>
+                                <label for="rgComprador" class="partes">RG:</label>
+                                <input type="numer" name="RG" id="rgComprador" required class="partes1">
                             </div>
                             <div>
-                                <label for="endComprador">Endereço:</label>
-                                <input type="text" name="" id="endComprador" required>
+                                <label for="endComprador" class="partes">Endereço:</label>
+                                <input type="text" name="" id="endComprador" required class="partes1">
                             </div>
-                            <button type="button" id="cadComprador" onclick="cadComprador()">Cadastrar</button>
+                            <p><button type="button" id="cadComprador" onclick="cadComprador()">Cadastrar Comprador</button></p>
             </fieldset>
             </section>
                 <section>
                     <fieldset>
-                        <legend><h3>Objeto do Contrato</h3></legend>
-                        Terreno<input type="radio" name="terOuIm" id="" checked>
-                        Imovel<input type="radio" name="terOuIm" id=""><br><br>
-                        <label for="valor">Valor:</label>
-                        <input type="text" name="" id="valor">
-                        <input type="text" name="" id="valorE" placeholder="Valor por Extenso">
-                        <label for="endObjeto">Endereço:</label>
-                        <input type="text" id="endObjeto" placeholder="Endereço completo">
-                        <br><br>
+                        <legend>Objeto do Contrato</legend>
+                        <input type="radio" name="tipoObjeto" id="imovel" checked>
+                        <label for="imovel" class="radio">Imóvel</label>
+                        <input type="radio" name="tipoObjeto" id="terreno">
+                        <label for="terreno" class="radio">Terreno</label><br>
+                        
+                        <label for="valor" class="imovel1">Valor:</label>
+                        <input type="text" name="" id="valor" class="imovel1">
+                        <input type="text" name="" id="valorE" placeholder="Valor por Extenso" class="imovel2"><br>
+                        <label for="endObjeto" class="imovel1">Endereço:</label>
+                        <input type="text" id="endObjeto" class="partes1">
+                        <br>
                         <h3>Metragem do Objeto:</h3>
-                        <label for="frente">Frente:</label>
-                        <input type="number" id="frente" placeholder="Metros de Frente">
-                        <input type="text" name="" id="frenteE" placeholder="Metros de Frente por Extenso">
-                        <label for="direita">Direita</label>
-                        <input type="number" id="direita" placeholder="Metragem pela direita">
-                        <input type="text" name="" id="direitaE" placeholder="Metragem pela direita por Extenso">
-                        <label for="esquerda">Esquerda</label>
-                        <input type="number" id="esquerda" placeholder="Metragem pela Esquerda">
-                        <input type="text" name="" id="esquerdaE" placeholder="Metragem pela Esquerda por Extenso">
-                        <label for="fundos">Fundos</label>
-                        <input type="number" id="fundos" placeholder="Metragem pelos fundos">
-                        <input type="text" name="" id="fundosE" placeholder="Metragem pelos fundos por Extenso">
+                        <label for="frente" class="imovel1">Frente:</label>
+                        <input type="number" id="frente" class="imovel1">
+                        <input type="text" name="" id="frenteE" placeholder="Metros por Extenso" class="imovel2">
+                        <label for="direita" class="imovel1">Direita:</label>
+                        <input type="number" id="direita" class="imovel1">
+                        <input type="text" name="" id="direitaE" placeholder="Metragem por Extenso" class="imovel2">
+                        <label for="esquerda" class="imovel1">Esquerda:</label>
+                        <input type="number" id="esquerda"  class="imovel1">
+                        <input type="text" name="" id="esquerdaE" placeholder="Metragem por Extenso" class="imovel2">
+                        <label for="fundos" class="imovel1">Fundos:</label>
+                        <input type="number" id="fundos" " class="imovel1">
+                        <input type="text" name="" id="fundosE" placeholder="Metragem por Extenso" class="imovel2">
                         <p>
-                            <button type="button" onclick="cadObjeto()">Cadastrar</button>
+                            <button type="button" onclick="cadObjeto()">Cadastrar Objeto</button>
                         </p>
                     </fieldset>
-                    </section>
                 </section>
+                <section>
+                    <fieldset>
+                        <legend>Do Contrato</legend>
+                        <label for="" class="imovel2">Local e Data:</label>
+                        <input type="text" id="localData" placeholder=" Ex: Capanema-PA, 07 de fevereiro de 2024">
+                        <p>
+                            <button type="button" onclick="localeData()">Confirmar</button>
+                        </p>
+                    </fieldset>
+                </section>
+            </section>
                 <div id="recibo"></div>
             </div>
         <div>
             <div id="reciboGerado">
             </div>
             <div id="docPronto">
-                <h3>CONTRATO DE COMPRA E VENDA DE <span id="terOuIm">IMÓVEL</span></h3>
+                <h3>CONTRATO DE COMPRA E VENDA DE <span id="titulo">IMÓVEL</span></h3>
 
                 <h4>R$ <span id="valorCima">11.000,00</span></h4>
                 
-                <p>Pelo Presente Instrumento Particular de CONTRATO DE COMPRA E VENDA DE IMÓVEL. Eu, <strong><span id="nomeVend">FULANO DE TAL</span></strong>, <span id="nacVend">brasileiro</span>,  portador<span></span> do <strong>RG nº <span id="rgVend">12345</span></strong> e do <strong>CPF nº <span id="cpfVend">123.456.789.10</span></strong> residente e domiciliado em <span id="endVend">Rua Fulano de tal, S/N, bairro <strong>FULANO DE TAL</strong>, Capanema-PA</span>, <strong>declaro ter recebido</strong> de <strong><span id="nomeComp">FULANO DE TAL</span></strong>, <span id="nacComp">brasileiro</span>, portador do <strong>RG nº <span id="rgComp">12345</span></strong> e do <strong>CPF nº <span id="cpfComp">123.456.789-10</span></strong>, residente e domiciliado em <span id="endComp">Rua tal, nº 100, Bairro Centro, Capanema-PA</span>, a quantia de R$ <span id="valorDentro">11.000,00</span> (<span id="valorEs">onze mil reais</span>), referente à venda que lhe fiz de um <span>Imóvel</span> localizado em <span id="enderecoObjeto">Rua tal, nº 08, Bairro tal, Capanema-PA</span>, com terreno medindo <span id="mFrente">10.0</span> (<span id="mFrenteE">dez</span>) metros de frente, com <span id="mDireita">20.0</span> (<span id="mDireitaE">vinte</span>) metros pela lateral direita, com <span id="mEsquerda">20</span> (<span id="mEsquerdaE">vinte</span>) metros pela lateral esquerda e <span id="mFundos">10.0</span>(<span id="mFundosE">dez</span>) metros pelo travessão dos fundos.</p>
+                <p>Pelo Presente Instrumento Particular de CONTRATO DE COMPRA E VENDA DE IMÓVEL. Eu, <strong><span id="nomeVend">FULANO DE TAL</span></strong>, <span id="nacVend">brasileiro</span>,  <span id="portador">portador</span> do <strong>RG nº <span id="rgVend">12345</span></strong> e do <strong>CPF nº <span id="cpfVend">123.456.789.10</span></strong> residente e domiciliado em <span id="endVend">Rua Fulano de tal, S/N, bairro <strong>FULANO DE TAL</strong>, Capanema-PA</span>, <strong>declaro ter recebido</strong> de <strong><span id="nomeComp">FULANO DE TAL</span></strong>, <span id="nacComp">brasileiro</span>, <span id="portadorComp">portador</span> do <strong>RG nº <span id="rgComp">12345</span></strong> e do <strong>CPF nº <span id="cpfComp">123.456.789-10</span></strong>, residente e domiciliado em <span id="endComp">Rua tal, nº 100, Bairro Centro, Capanema-PA</span>, a quantia de R$ <span id="valorDentro">11.000,00</span> (<span id="valorEs">onze mil reais</span>), referente à venda que lhe fiz de um <span id="titulo2">Imóvel</span> localizado em <span id="enderecoObjeto">Rua tal, nº 08, Bairro tal, Capanema-PA</span>, <span id="titulo3">com terreno</span> medindo <span id="mFrente">10.0</span> (<span id="mFrenteE">dez</span>) metros de frente, com <span id="mDireita">20.0</span> (<span id="mDireitaE">vinte</span>) metros pela lateral direita, com <span id="mEsquerda">20</span> (<span id="mEsquerdaE">vinte</span>) metros pela lateral esquerda e <span id="mFundos">10.0</span>(<span id="mFundosE">dez</span>) metros pelo travessão dos fundos.</p>
                 
-                <p>A presente venda foi feita de livre e desembaraçada de todo e quaisquer ônus judicial ou extrajudicial, pelo que dou a<span>o</span> comprador<span></span> plena, geral, definitiva e irrevogável quitação, transferindo-lhe todos os direitos e deveres que me cabiam sobre o citado imóvel ora vendido, podendo daqui por diante o comprador fazer do imóvel o uso que melhor lhe convier.</p>
+                <p>A presente venda foi feita de livre e desembaraçada de todo e quaisquer ônus judicial ou extrajudicial, pelo que dou <span id="a_compradora">ao comprador</span> plena, geral, definitiva e irrevogável quitação, transferindo-lhe todos os direitos e deveres que me cabiam sobre o citado imóvel ora vendido, podendo daqui por diante <span id="a_compradora2">o comprador</span> fazer do imóvel o uso que melhor lhe convier.</p>
                 <p>E por ser expressão da verdade  datamos e assinamos o presente recibo na presença de 02 (duas) testemunhas que também assinarão para melhor clareza e validade.</p>
                 
                 
                 
-                <h4>Capanema, 07 de fevereiro de 2024</h4>
+                <h4><span id="localeData">Capanema-PA, 07 de fevereiro de 2024</span></h4>
                 
                 
                 
-                <p class="center line">Vendedor<span></span>: _____________________________________________</p>
+                <p class="center line"><span id="vendedoraAss">Vendedor</span>: _____________________________________________</p>
                 <p class="center perto" id="nomeVendAss">Fulano de Tal</p>
 
-                <p class="center line">Comprador<span></span>: _____________________________________________</p>
+                <p class="center line"><span id="compradorAss">Comprador</span>: _____________________________________________</p>
                <p class="center perto" id="nomeCompAss">Fulano de Tal</p>
                
                 
