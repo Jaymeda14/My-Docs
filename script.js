@@ -1,21 +1,68 @@
+let data = new Date()
+
 
 
 function cadVendedor(){
-    let vendedor = {
-        Nome: document.getElementById('nomeVendedor').value, 
-        CPF: document.getElementById('cpfVendedor').value, 
-        RG: document.getElementById('rgVendedor').value,
-        Endereço:document.getElemetById("endVendedor").value,
-        }
+    let nomeVendedor = document.getElementById('nomeVendedor').value;
+    let nacVendedor = document.getElementById('nacVendedor').value;
+    let cpfVendedor = document.getElementById('cpfVendedor').value;
+    let rgVendedor = document.getElementById('rgVendedor').value;
+    let enderecoVendedor = document.getElementById('endVendedor').value;
+
+    document.getElementById('nomeVend').innerHTML = `${nomeVendedor}`
+    document.getElementById('nacVend').innerHTML = `${nacVendedor}`
+    document.getElementById('rgVend').innerHTML = `${rgVendedor}`
+    document.getElementById('cpfVend').innerHTML = `${cpfVendedor}`
+    document.getElementById('endVend').innerHTML = `${enderecoVendedor}`
+    document.getElementById('nomeVendAss').innerHTML = `${nomeVendedor}`
 }
 
+
 function cadComprador(){
-    let vendedor = {
-        Nome: document.getElementById('nomeComprador').value, 
-        CPF: document.getElementById('cpfComprador').value, 
-        RG: document.getElementById('rgComprador').value,
-        Endereço:document.getElemetById("endComprador").value,
-        }
+    let nomeComprador = document.getElementById('nomeComprador').value;
+    let nacComprador = document.getElementById('nacComprador').value;
+    let cpfComprador = document.getElementById('cpfComprador').value;
+    let rgComprador = document.getElementById('rgComprador').value;
+    let enderecoComprador = document.getElementById('endComprador').value;
+
+    document.getElementById('nomeComp').innerHTML = `${nomeComprador}`
+    document.getElementById('nacComp').innerHTML = `${nacComprador}`
+    document.getElementById('rgComp').innerHTML = `${rgComprador}`
+    document.getElementById('cpfComp').innerHTML = `${cpfComprador}`
+    document.getElementById('endComp').innerHTML = `${enderecoComprador}`
+    document.getElementById('nomeCompAss').innerHTML = `${nomeComprador}`
+}
+
+function cadObjeto() {
+    let valor = document.getElementById('valor').value
+    let valorE = document.getElementById('valorE').value
+    let endObjeto = document.getElementById('endObjeto').value
+
+    
+    // a partir daqui as metragens
+    let frente = Number(document.getElementById('frente').value)
+    let frenteE = document.getElementById('frenteE').value
+    let direita = Number(document.getElementById('direita').value)
+    let direitaE = document.getElementById('direitaE').value
+    let esquerda = Number(document.getElementById('esquerda').value)
+    let esquerdaE = document.getElementById('esquerdaE').value
+    let fundos = Number(document.getElementById('fundos').value)
+    let fundosE = document.getElementById('fundosE').value
+
+    document.getElementById('valorCima').innerHTML = `${valor}`
+    document.getElementById('valorDentro').innerHTML = `${valor}`
+    document.getElementById('valorEs').innerHTML = `${valorE}`
+    document.getElementById('enderecoObjeto').innerHTML = `${endObjeto}`
+    document.getElementById('mFrente').innerHTML = `${frente}`
+    document.getElementById('mFrenteE').innerHTML = `${frenteE}`
+    document.getElementById('mDireita').innerHTML = `${direita}`
+    document.getElementById('mDireitaE').innerHTML = `${direitaE}`
+    document.getElementById('mEsquerda').innerHTML = `${esquerda}`
+    document.getElementById('mEsquerdaE').innerHTML = `${esquerdaE}`
+    document.getElementById('mfundos').innerHTML = `${fundos}`
+    document.getElementById('mfundosE').innerHTML = `${fundosE}`
+    
+    
 }
 
 

@@ -39,13 +39,14 @@ section{
     align-items: right;   
 }
 label{
-    display: inline-block;
-    width: 60px;
+    display: block;
+    width: 90px;
     margin-left: 05px;
 }
 input{
     margin: 3px;
     height: 20px;
+    width: 300px;
 }
 select{
     width: 100px;
@@ -98,7 +99,7 @@ footer{
     height: 30px;
     text-align: center;
     background-color: white;
-    
+
 }
 @media print{
     #docPronto{
@@ -106,7 +107,9 @@ footer{
         padding: 0px;
         box-shadow: none;
     }
-    
+    footer{
+        display: none;
+    }
     .container{
         display: none;
     }
