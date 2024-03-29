@@ -61,6 +61,9 @@ section.partes > label{
 section > fieldset > p {
     text-align: center;
 }
+#nomeComp, #nomeVend{
+    text-transform: uppercase;
+}
 .partes{
     display: inline-block;
     width: 110px;
