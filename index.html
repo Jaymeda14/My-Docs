@@ -9,90 +9,119 @@
 <body>
     <main>
         <div class="container">
-            <h1>Recíbo Online</h1>
+            <h1>Recíbo</h1>
             <!-- Seções do formulário -->
-            <form id="cvForm">
-        
+            <section>
+            <section>
+                        <!-- Campos do formulário Vendedor -->
+                <fieldset>
+                <legend>Dados Vendedor</legend>
+                    Masculino<input type="radio" name="genVend" id="" checked>
+                    Feminino<input type="radio" name="geneVend" id="">
+                    <div>
+                        <label for="nomeVendedor">Nome:</label>
+                        <input type="text" id="nomeVendedor" required>
+                    </div>
+                    <div>
+                        <label for="cpfVendedor">CPF:</label>
+                        <input type="text" id="cpfVendedor" required>
+                    </div>
+                    <div>
+                        <label for="rgVendedor">RG:</label>
+                        <input type="numer" name="RG" id="rgVendedor" required>
+                    </div>
+                    <div>
+                        <label for="endereçoVendedor">Endereço:</label>
+                        <input type="text" name="" id="endVendedor" required>
+                    </div>
+                    <button type="button" id="cadVendedor">Cadastrar</button>
+                </fieldset>
+            </section>
+            <section>
+                        <!-- Campos do formulário Comprador -->
+            <fieldset>
+            <legend>Dados Comprador</legend>
+                            Masculino<input type="radio" name="genComp" id="" checked>
+                            Feminino<input type="radio" name="genComp" id="">
+                            <div>
+                                <label for="nomeVendedor">Nome:</label>
+                                <input type="text" id="nomeComprador" required>
+                            </div>
+                            <div>
+                                <label for="cpfVendedor">CPF:</label>
+                                <input type="text" id="cpfComprador" required>
+                            </div>
+                            <div>
+                                <label for="rgVendedor">RG:</label>
+                                <input type="numer" name="RG" id="rgComprador" required>
+                            </div>
+                            <div>
+                                <label for="endereçoVendedor">Endereço:</label>
+                                <input type="text" name="" id="endComprador" required>
+                            </div>
+                            <button type="button" id="cadComprador">Cadastrar</button>
+            </fieldset>
+            </section>
                 <section>
-                    <section>
-                        <h2>Dados Vendedor</h2>
-                        <!-- Campos do formulário -->
-                        <input type="radio" name="genero" id="" value="Masculino">
-                        <input type="radio" name="genero" id="">
-                        <input type="text" id="nomeVendedor" placeholder="Nome">
-                        <input type="text" id="cpfVendedor" placeholder="CPF">
-                        <input type="numer" name="RG" id="rgVendedor" placeholder="RG">
-                        <input type="text" name="" id="endereçoVendedor" placeholder="Endereço do Vendedor">
-                    </section>
-                    <section>
-                    <h2>Dados Comprador</h2>
-                    <!-- Campos do formulário -->
-                    <input type="text" id="nomeComprador" placeholder="Nome">
-                    <input type="text" id="cpfComprador" placeholder="CPF">
-                    <input type="numer" name="RG" id="rgComprador" placeholder="RG">
-                    <input type="text" name="" id="endereçoComprador" placeholder="Endereço do Comprador">
-                    </section>
-                <!--  -->
-                    <section>
-                    <h2>Objeto do Contrato</h2>
-                    <select name="" id="terrenoOuImovel">
-                        <option value="IMÓVEL">Imóvel</option>
-                        <option value="TERRENO">Terreno</option>
-                    </select>
-                    <input type="text" id="endObjeto" placeholder="Endereço completo">
-                    <input type="number" id="mFrente" placeholder="Metros de Frente">
-                    <input type="number" id="mDireita" placeholder="Metragem pela direita">
-                    <input type="number" id="mEsquerda" placeholder="Metragem pela Esquerda">
-                    <input type="number" id="mFundos" placeholder="Metragem pelos Fundos">
+                    <fieldset>
+                        <legend>Objeto do Contrato</legend>
+                            <select name="" id="terrenoOuImovel">
+                            <option value="IMÓVEL">Imóvel</option>
+                            <option value="TERRENO">Terreno</option>
+                        </select>
+                        <input type="text" id="endObjeto" placeholder="Endereço completo">
+                        <input type="number" id="mFrente" placeholder="Metros de Frente">
+                        <input type="number" id="mDireita" placeholder="Metragem pela direita">
+                        <input type="number" id="mEsquerda" placeholder="Metragem pela Esquerda">
+                        <input type="number" id="mFundos" placeholder="Metragem pelos Fundos">
+                        <p>
+                            <button type="button">Cadastrar</button>
+                        </p>
+                    </fieldset>
                     </section>
                 </section>
                 <div id="recibo"></div>
-                <button type="button" onclick="gerarRecibo()">Gerar Recíbo</button>
-                <button type="button" onclick="teste()">teste</button>
-            </form>
-        
-        </div>
+            </div>
         <div>
             <div id="reciboGerado">
-            <!-- Aqui será exibido o Recíbo gerado -->
             </div>
             <div id="docPronto">
-                <h3>CONTRATO DE COMPRA E VENDA DE <span id="terOuIm"></span></h3>
+                <h3>CONTRATO DE COMPRA E VENDA DE <span id="terOuIm">IMÓVEL</span></h3>
 
                 <h4>R$ 11.000,00</h4>
                 
-                <p>
-                    Pelo Presente Instrumento Particular de CONTRATO DE COMPRA E VENDA DE IMÓVEL. Eu, <span id="nameV">Nome Vendedor</span>, brasileiro,  portador do RG nº ${rgVendedor} e do CPF: ${cpfVendedor} residente e domiciliado em ${endereçoVendedor}, declaro ter recebido de ${nomeComprador}, brasileiro, portador do RG nº ${rgComprador} e do CPF: ${cpfComprador}, residente e domiciliado em ${endereçoComprador}, a quantia de R$ 11.000,00 (onze mil reais), referente à venda que lhe fiz de um --- localizado na ${endObjeto}, com terreno medindo ${mFrente}30.0 (trinta metros) de frente, com ${mDireita}30.0 (trinta metros) pela lateral direita, com ${mEsquerda}() metros pela lateral esquerda e ${mFundos}30.0 (trinta metros) pelos fundos, tendo como vizinhos, pelo lado direito a Sr.ª Regiane do Socorro Almeida, pelo lado esquerdo o Sr.ª Rayanny Alves da Silva e finalmente pelos fundos com terras pertencentes a quem for de direito.
-                    A presente venda foi feita de livre e desembaraçada de todo e quaisquer ônus judicial ou extrajudicial, pelo que dou a compradora plena, geral, definitiva e irrevogável quitação, transferindo-lhe todos os direitos e deveres que me cabiam sobre o citado TERRENO ora vendido, podendo daqui por diante a compradora fazer do imóvel o uso que melhor lhe convier.
-                    E por ser expressão da verdade  datamos e assinamos o presente recibo na presença de 02 (duas) testemunhas que também assinarão para melhor clareza e validade.
-                </p>
+                <p>Pelo Presente Instrumento Particular de CONTRATO DE COMPRA E VENDA DE IMÓVEL. Eu, <strong>FULANO DE TAL</strong>, brasileiro,  portador do <strong>RG nº 12345</strong> e do <strong>CPF: 123.456.789.10</strong> residente e domiciliado em Rua Fulano de tal, S/N, bairro <strong>FULANO DE TAL</strong>, Capanema-PA, <strong>declaro ter recebido</strong> de <strong>FULANO DE TAL</strong>, brasileiro, portador do <strong>RG nº 12345</strong> e do <strong>CPF nº 123.456.789-10</strong>, residente e domiciliado em Rua tal, nº 0, Bairro Fulano de tal, Capanema-PA, a quantia de R$ 11.000,00 (onze mil reais), referente à venda que lhe fiz de um Imóvel localizado na Rua tal, nº 08, Bairro tal, Capanema-PA, com terreno medindo 10.0 (dez metros) de frente, com 20.0 (20 metros) pela lateral direita, com 20(vinte metros) pela lateral esquerda e 10.0 (dez metros) pelo travessão dos fundos, tendo como vizinhos, pelo lado direito a Sr.ª Regiane do Socorro Almeida, pelo lado esquerdo o Sr.ª Rayanny Alves da Silva e finalmente pelos fundos com terras pertencentes a quem for de direito.</p>
+                
+                <p>A presente venda foi feita de livre e desembaraçada de todo e quaisquer ônus judicial ou extrajudicial, pelo que dou a compradora plena, geral, definitiva e irrevogável quitação, transferindo-lhe todos os direitos e deveres que me cabiam sobre o citado imóvel ora vendido, podendo daqui por diante a compradora fazer do imóvel o uso que melhor lhe convier.</p>
+                <p>E por ser expressão da verdade  datamos e assinamos o presente recibo na presença de 02 (duas) testemunhas que também assinarão para melhor clareza e validade.</p>
+                
+                
                 
                 <h4>Capanema, 07 de fevereiro de 2024</h4>
                 
                 
                 
-                <p>Vendedor: ___________________________________________________________</p>
-                <p><span id="nameVa"></span></p>
-                <p><span id="RGVA"></span> <span id="CPFVA"></span></p>
+                <p class="center line">Vendedor: _____________________________________________</p>
+                <p class="center perto">Fulano de Tal</p>
 
-                <p>Comprador: ___________________________________________________________</p>
-                <p><span id="nameCa"></span></p>
-                <p><span id="RGCA"></span> <span id="CPFCA"></span></p>
-                      
+                <p class="center line">Comprador: _____________________________________________</p>
+               <p class="center perto">Fulano de Tal</p>
                
                 
-                
-                        <p>Testemunhas:</p>
+                <br>
+                <p>Testemunhas:</p>
                         
-                        <p>________________________________________________________</p>
+                <p class="line">____________________________________________</p>
                         
-                        <p>_______________________________________________________</p>
+                <p class="line">____________________________________________</p>
                 
         
         
             </div>
         </div>
+        
     </main>
+    <footer><p>Criado por <strong>Jaime Freire</strong> estudante de <strong>ADS Unicesumar</strong></p></footer>
 
     <script src="script.js"></script>
 </body>

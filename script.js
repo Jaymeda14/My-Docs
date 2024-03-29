@@ -1,5 +1,34 @@
 
-function gerarRecibo() {
+
+function cadVendedor(){
+    let vendedor = {
+        Nome: document.getElementById('nomeVendedor').value, 
+        CPF: document.getElementById('cpfVendedor').value, 
+        RG: document.getElementById('rgVendedor').value,
+        Endereço:document.getElemetById("endVendedor").value,
+        }
+}
+
+function cadComprador(){
+    let vendedor = {
+        Nome: document.getElementById('nomeComprador').value, 
+        CPF: document.getElementById('cpfComprador').value, 
+        RG: document.getElementById('rgComprador').value,
+        Endereço:document.getElemetById("endComprador").value,
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*function gerarRecibo() {
     // Obtenha os dados do vendedor
     var nomeVendedor = document.getElementById('nomeVendedor').value;
     var cpfVendedor = document.getElementById('cpfVendedor').value;
@@ -103,4 +132,4 @@ function teste (){
 
     // Usando dados do Objeto
     document.getElementById('terOuIm').innerText = terrenoOuImovel
-}
+}*/
