@@ -28,6 +28,10 @@ main{
 }
 
 div{
+    background-image: url(../imagens/em\ construção.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 140px;
     height: 200px;
     border: 1px solid black;
