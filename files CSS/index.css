@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
 body{
     background-color: azure;
     display: flex;
@@ -26,6 +30,9 @@ main{
     align-content: space-around;
     background-color: white;
 }
+a{
+    text-decoration: none;
+}
 
 div{
     background-image: url(../imagens/em\ construção.jpg);
@@ -35,6 +42,15 @@ div{
     width: 140px;
     height: 200px;
     border: 1px solid black;
+}
+#recibo{
+    text-align: center;
+    font-size: 2em;
+    font-weight: bolder;
+    -webkit-text-stroke-width: 1px; /* largura da borda */
+    -webkit-text-stroke-color: black; /* cor da borda */
+    background-image: url(../imagens/Recibo.jpg);
+    color: white;
 }
 footer{
     background-color: white;
