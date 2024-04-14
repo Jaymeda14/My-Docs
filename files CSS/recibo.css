@@ -37,6 +37,8 @@ input[type=radio]{
     top: 4px;
     
 }
+
+
 button{
     width: 90px;
     padding: 10px;
@@ -53,7 +55,9 @@ button:hover{
     width: 93px;
     
 }
+
 section{
+    min-width: 346px;
     display: flex;
     flex-direction: column; 
     align-items: right;   
@@ -110,6 +114,14 @@ select{
     margin-left: 3px;
     height: 20px;
 }
+input[type=checkbox]{
+    width: 30px;    
+}
+#vizi{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
 main{
     display: flex;
     align-content: flex-start;
@@ -123,7 +135,7 @@ main{
     height: 1060px;
 }
 #docPronto > h3{
-    padding-top: 30PX;
+    padding-top: 20PX;
     text-align: center;
     margin: 10px;
     font-size: 1.5rem;

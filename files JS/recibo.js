@@ -1,5 +1,7 @@
 let data = new Date()
+let vizinhos = document.getElementById('vizinhos')
 
+document.getElementById('vizinhos').addEventListener('change', show);
 
 
 function cadVendedor(){
@@ -73,6 +75,11 @@ function cadObjeto() {
     let fundos = Number(document.getElementById('fundos').value)
     let fundosE = document.getElementById('fundosE').value
     
+    // caso necessario aqui os nomes dos vizinhos
+    let viziD = document.getElementById("viziD").value
+    let viziE = document.getElementById('viziE').value
+    let viziF = document.getElementById("viziF").value
+
     document.getElementById('valorCima').innerHTML = `${valor}`
     document.getElementById('valorDentro').innerHTML = `${valor}`
     document.getElementById('valorEs').innerHTML = `${valorE}`
@@ -85,6 +92,11 @@ function cadObjeto() {
     document.getElementById('mEsquerdaE').innerHTML = `${esquerdaE}`
     document.getElementById('mFundos').innerHTML = `${fundos}`
     document.getElementById('mFundosE').innerHTML = `${fundosE}`
+
+    document.getElementById('vizD').innerHTML = `${viziD}`
+    document.getElementById('vizE').innerHTML = `${viziE}`
+    document.getElementById('vizF').innerHTML = `${viziF}`
+
 
     if(tipoObjeto[1].checked){
         document.getElementById('titulo').innerHTML = `TERRENO`
@@ -101,3 +113,17 @@ function localeData(){
 
     document.getElementById('localeData').innerHTML = `${localData}`
 }
+
+function show(){
+    let viz = document.getElementById('viz')
+    let mostrar = document.querySelector('.mostrar')
+    if (vizinhos.checked){
+        mostrar.style.display = "block"
+        viz.innerHTML = `,tendo como vizinho pelo lado direito o com terras pertencentes a <span id="vizD">quem for de direito</span>, pelo lado esquerdo com terras pertencentes a <span id="vizE">quem for de direito</span> e finalmente pelos fundos com terras pertencentes a <span id="vizF">quem for de direito</span>.`
+    } else {
+        mostrar.style.display = "none"
+        viz.innerHTML = `.`
+    }
+}
+show()
+
