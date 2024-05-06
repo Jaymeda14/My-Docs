@@ -119,7 +119,7 @@ function show(){
     let mostrar = document.querySelector('.mostrar')
     if (vizinhos.checked){
         mostrar.style.display = "block"
-        viz.innerHTML = `,tendo como vizinho pelo lado direito o com terras pertencentes a <span id="vizD">quem for de direito</span>, pelo lado esquerdo com terras pertencentes a <span id="vizE">quem for de direito</span> e finalmente pelos fundos com terras pertencentes a <span id="vizF">quem for de direito</span>.`
+        viz.innerHTML = `, tendo como vizinho pelo lado direito com terras pertencentes a <span id="vizD">quem for de direito</span>, pelo lado esquerdo com terras pertencentes a <span id="vizE">quem for de direito</span> e finalmente pelos fundos com terras pertencentes a <span id="vizF">quem for de direito</span>.`
     } else {
         mostrar.style.display = "none"
         viz.innerHTML = `.`
