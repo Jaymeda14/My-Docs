@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contrato de Locação</title>
+    <style>
+        span{           
+            color: red;
+        }
+    </style>
 </head>
 <body>
     <main>
         <fieldset>
             <legend>Dados do Locador</legend>
             <label for="dono">Locador:</label>
-            <input type="text" id="dono">
+            <input type="text" id="dono" oninput="charge()">
             <label for="text">RG:</label>
             <input type="text" id="RGDono">
             <label for="CPFDono">CPF:</label>
@@ -38,8 +43,61 @@
             <label for="dataF">Data de término:</label>
             <input type="date" name="" id="dataF">
         </fieldset>
-        <div id="contratoGerado"></div>
+        <div id="contratoGerado">
+            <h1>CONTRATO DE ALUGUEL</h1>
+
+
+<p>Locador: <span id="nomeLocador">---</span>, <span>---</span>, portador(a) do RG no <span>---</span> PC/PA e do CPF no <span>---</span>.</p>
+
+<p>Locatário: <span>---</span>, <span>---</span>, portador(a) do RG no <span>---</span> PC/PA e do CPF no <span>---</span>.</p>
+
+<p>CLAUSULA 1º: Constitui o objeto do presente instrumento a locação do imóvel localizado no End. <span>--</span>.</p>
+
+<p>CLAUSULA 2º: O prazo de vigência deste instrumento é de <span>---</span>, iniciando-se em <span>---</span> e com termino em <span>---</span>.</p>
+
+<p>PARÁGRAFO 1º: Findando os prazos vigentes em contato em contrato, se a locadora não fizer o pedido por escrito para que a locatária desocupe o imóvel, se renovara o contrato automaticamente respeitando os valores, reajuste e prazos já acertados entre as partes.</p>
+
+<p>CLAUSULA 3º: O locatário fará os pagamentos dos alugueis diretamente ao proprietário do imóvel todo o dia <span>---</span> de cada mês.</p>
+
+<p>CLAUSULA 4º: O aluguel mensal convencionado é de R$ <span>---</span> (<span>---</span>).</p>
+
+<p>CLÁUSULA 5º: Fica o locatário, a responsabilidade em zelar pela conservação, limpeza do imóvel, </p>
+
+<p>CLAUSULA 6º: É de responsabilidade do locatário pagar Luz, nos prazos estipulados pelas concessionárias no prazo vigente deste contrato e apresentá-los quando solicitados pelo locador, e todos os outros encargos de qualquer natureza e esfera administrativa que incidirem sobre o imóvel residencial é de responsabilidade única e exclusiva do locador.</p>
+
+<p>CLAUSULA 7º: O locatário compromete-se findo o prazo de aluguel, entregar o referido imóvel em perfeito estado de conservação incluindo todas as instalações do imóvel. </p>
+
+<p>CLAUSULA 8º: Fica eleito o foro da comarca de Capanema-Pa, para diminuir as questões oriundas da interpretação e execução do presente contrato.</p>
+
+
+<p><span>---</span></p>
+
+
+
+
+<p>
+    __________________________________________
+    Locador: <span>---</span>
+</p>
+
+
+
+<p>
+    __________________________________________
+    Locatário: <span>---</span>
+</p>
+
+        </div>
     </main>
     <footer><p>Criado por <strong>Jaime Freire</strong></p></footer>
+
+    <script>
+        function charge(){
+            let dono = document.getElementById('dono').value;
+            let nomeLocador = document.getElementById('nomeLocador')
+
+            nomeLocador.innerHTML = dono
+        }
+    </script>
 </body>
 </html>
